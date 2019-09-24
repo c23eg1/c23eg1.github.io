@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#pizza{
+		width: 800px;
+		height: 800px;
+		background-image: url("http://www.pngplay.com/wp-content/uploads/2/Cheese-Pizza-Transparent-Background.png");
+		background-repeat: no-repeat;
+		background-size:contain;
+	}
+
+		#pepperoni{
+			width: 200px;
+			height:200px;
+			background-image: url("https://i.dlpng.com/static/png/4007679_thumb.png");
+			background-size:contain;
+			background-repeat:no-repeat;
+
+		}
+
+
+		
+
+	</style>
+</head>
+<body>
+	<div id="pizza" >
+			<div id="pepperoni"></div>
+
+
+
+	</div>
+
+	<script type="text/javascript">
+		var pizza= document.getElementById("pizza");
+
+
+        function makePepp() {
+        var pepp = document.createElement("div");
+        pepp.style.width = "50px";
+        pepp.style.height = "50px";
+        pepp.style.backgroundColor = "red";
+        pepp.style.position = "fixed";
+
+        
+pizza.addEventListener("mousemove", function(event) {
+            console.log(event.clientX, event.clientY);
+
+    });
+
+        pizza.appendChild(pepp);
+
+        pepp.style.left = event.clientX + "px";
+            pepp.style.top = event.clientY + "px";
+
+
+    };
+
+    
+
+
+		pizza.addEventListener("mousemove", function(event){
+			console.log(event);
+		});
+
+
+  
+
+		pizza.addEventListener("click", makePepp)
+
+		{
+			console.log(event);
+		
+
+};
+
+		
+					
+
+
+	</script>
+
+
+
+
+</body>
+</html>
