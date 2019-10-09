@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+
+    <style type="text/css">
+
+
+        #ella{
+            font-size: 50px
+            top:30%;
+            left:30%;
+            margin-top: 300px;
+            margin-left: 600px;
+        }
+
+        #galaxy{
+            font-size: 20px
+             top: 50%;
+            left:50%;
+            margin-top: 100px;
+            margin-left: 300px;
+
+        }
+
+
+        #code{
+            font-size: 20px
+         
+            top: 50%;
+            left:50%;
+            margin-top: 150px;
+            margin-left: 500px;
+        }
+
+    	.circle{
+    		
+            position:absolute;
+    	}
+
+    	#one{
+    		width:130px;
+            height:127px;
+            background-image: url("http://www.clker.com/cliparts/7/m/A/A/h/X/white-star-black-md.png");
+            background-size: cover;
+            left:60%;
+            top:30%;
+    	}
+
+        #two{
+            width:210px;
+            height:205px;
+            background-image: url("http://www.clker.com/cliparts/7/m/A/A/h/X/white-star-black-md.png");
+
+            left:40%;
+            top:50%;
+            background-size: cover;
+        }
+
+
+        #three{
+            width:54px;
+            height:53px;
+           background-image: url("http://www.clker.com/cliparts/7/m/A/A/h/X/white-star-black-md.png");
+           background-size: cover;
+            left:30%;
+            top:30%;
+        }
+
+         #four{
+            width:30px;
+            height:30px;
+           background-image: url("http://www.clker.com/cliparts/7/m/A/A/h/X/white-star-black-md.png");
+           background-size: cover;
+            left:80%;
+            top:80%;
+        }
+
+          #five{
+            width:260px;
+            height:250px;
+           background-image: url("http://www.clker.com/cliparts/7/m/A/A/h/X/white-star-black-md.png");
+           background-size: cover;
+            opacity:0.6;
+            left:80%;
+            top:80%;
+
+
+        }
+
+
+        #menu {
+        background-color: lightblue;
+        position: fixed;
+        width: 100px;
+        height: 900px;
+        z-index: 5;
+/*        left:20%;*/
+        top:-50%;
+        opacity: 1000%;
+
+    }
+    </style>
+</head>
+
+<body>
+    <div id="ellas">
+        Ella's
+    </div>
+
+    <div id="galaxy">
+    	galaxy 
+    </div>
+
+    <div id="code">
+        of code
+    </div>
+
+    
+    <a href="pizza.html"><div id="one" class="circle"></div></a>
+    <a href="pizza.html"> <div id="two" class="circle"></div></a>
+     <a href="pizza.html"><div id="three" class="circle"></div></a>
+    <a href="pizza.html"> <div id="four" class="circle"></div></a>
+     <a href="pizza.html"><div id="five" class="circle"></div></a>
+</body>
+
+</html>
