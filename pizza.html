@@ -11,14 +11,14 @@
 		background-size:contain;
 	}
 
-		#pepperoni{
+	/*	#pepperoni{
 			width: 200px;
 			height:200px;
 			background-image: url("https://i.dlpng.com/static/png/4007679_thumb.png");
 			background-size:contain;
 			background-repeat:no-repeat;
 
-		}
+		}*/
 
 
 		
@@ -27,13 +27,8 @@
 </head>
 <body>
 	<div id="pizza" >
-		<div id="pepperoni">
-			
-			<svg height="100" width="100">
-  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
-  Sorry, your browser does not support inline SVG.  
-</svg> 
-		</div>
+		<!-- <div id="pepperoni">
+		</div> -->
 
 
 
@@ -44,12 +39,14 @@
 
 
         function makePepp() {
-        var peppp= document.getElementById("pepperoni");
-        var pepp = document.createElement("peppp");
-        pepp.style.width = "50px";
-        pepp.style.height = "50px";
-        pepp.style.backgroundColor = "red";
-        pepp.style.position = "fixed";
+        var pepp = document.createElement("div");
+        pepp.style.width = "100px";
+        pepp.style.height = "100px";
+        pepp.style.borderRadius = "50%";
+        // pepp.style.backgroundColor = "red";
+        pepp.style.position = "absolute";
+        pepp.style.backgroundImage = "url(https://i.dlpng.com/static/png/4007679_thumb.png)";
+        pepp.style.backgroundSize = "cover";
 
         
 pizza.addEventListener("mousemove", function(event) {
@@ -59,8 +56,8 @@ pizza.addEventListener("mousemove", function(event) {
 
         pizza.appendChild(pepp);
 
-        pepp.style.left = event.clientX + "px";
-            pepp.style.top = event.clientY + "px";
+        pepp.style.left = event.clientX - 25 + "px";
+            pepp.style.top = event.clientY - 25 + "px";
 
 
     };
