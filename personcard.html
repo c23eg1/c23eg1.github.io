@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>person card</title>
+
+	<style>
+		
+/*/// FOR YOU TO DO://////
+
+1. CHANGE alll #beyoncek TO #your 1st name and last initial
+
+2. change the background to a url of an image of you or something that represents you
+////////////////////////////////////////
+*/
+
+.ellar {
+ background-image:  
+url(https://drive.google.com/uc?id=1Lf8sZUUbvuBBYnEayGgU0mKhdRMNVeO5); 
+  
+}
+
+/*FOR YOU TO DO: add some hover effects!
+
+1. First change beyonceK to your name and last initial (it should be the sam as your ID without the #)*/
+
+.ellag-effect:hover {
+  animation-name:
+  transform:rotateZ(100rad);
+  transition-duration:3s;
+  transition:ease-in;
+background-image:url("https://i.pinimg.com/originals/dd/ff/bd/ddffbd7284cf1e1b7865557f3e8378f9.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  
+}
+.container:hover{
+  
+  background-color:pink;
+}
+
+#ellag-name:hover{
+animation-name:expand; 
+  transform: rotate(720deg);
+  animation-duration:1s;
+  animation-iteration-count:infinite;
+  transition:3s ease-in-out;
+}
+
+@keyframes expand{
+    0%{
+    font-size:100%;
+     font-weight:500
+  }
+   50%{
+    font-size:300%;
+    font-weight:800;
+  }
+  
+  100%{
+    font-size:100%
+    font-weight:500
+  }
+}
+
+.container {
+    width: 15vw;
+    margin: 1%;
+    text-align: center;
+    color: rgb(105, 105, 105);
+    font-size: 18px;
+    display: inline-block;
+  backface-visibility:hidden;
+  transition:2s ease-in-out;
+  border-radius:10%
+
+}
+
+
+.headshot {
+  backface-visibility: visible;
+  perspective: 1000;
+  background-color: rgba(245, 245, 245, 0.5);
+  width: 15vw;
+  height: 15vw;
+  position: relative;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10%;
+  top: 0%;
+  left: 0%;
+  margin-bottom: 5%;
+  background-color: rgb(176, 176, 176);
+  border: 1px grey solid;
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  /*-webkit-transition: all 0.5s ease-out;
+-moz-transition: all 0.5s ease-out;*/
+  transition: 0.5s ease-in;
+}
+
+/*Below is the styling for a div with the class name of "your-name." It's is the div containing  the text of your name, which is underneath the headshot div. This is what you'll click on to show the description on the "back" of your card.*/
+
+.your-name {
+  background-color:red;
+  backface-visibility: visible;
+  z-index: 10;
+  position: relative;
+  top: 0%;
+  font-size: 2.5vw;
+  font-family: Quicksand, sans-serif;
+  color: rgb(105, 105, 105);
+}
+
+/*Below is a class with the name "description-invisible." The "description" is the class name I've given to a div which is the child of the headshot div. Even though it's right on top of the headshot div, we don't see it because it has an opacity of 0 and is invisible!*/
+
+.description-invisible {
+  z-index: -10;
+  opacity: 0;
+/*   transform: rotateY(0deg); */
+  transition: 0.5s ease-in-out;
+  font-family: Quicksand, sans-serif;
+  font-size: 1.25vw;
+  position: relative;
+  width: 100%;
+  height: 100%;
+/*   text-align: left; */
+}
+
+/*
+Below is the class name and styling we give to the description div when we click on the divs with the class "your-name."" It makes the description div visible by giving it an opacity of 1. It also obviously has other CSS properties which make the description div look similar to the headshot div. 
+*/
+.description-apparent {
+/*   pointer-events: none; */
+  transform:rotateY(180deg);
+  z-index: 12;
+  text-align: left;
+  perspective: 1000;
+  transition-delay: 0.5s;
+  transition: 0.1s ease-in;
+  transform: rotateY(-180deg);
+  font-family: Quicksand, sans-serif;
+  font-size: 1.25vw;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  animation-name: fadeToTransparent;
+  animation-duration: 8s;
+  background-color: rgb(199, 227, 255);
+  width: 95%;
+  height: 95%;
+  border-radius: 10%;
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  padding: 2%;
+}
+
+/*Below are the properties of the animation that will fade divs with the "description-apparent" class back to being transparent with an opacity of 0. */
+
+@keyframes fadeToTransparent {
+  0% {
+    opacity: 1;
+    z-index: 1000;
+  }
+
+  50% {
+    opacity: 1;
+    z-index: 1000;
+  }
+
+  90% {
+    opacity: 1;
+    z-index: 1000;
+  }
+
+  100% {
+    opacity: 1;
+    z-index: 1000;
+  }
+}
+
+.headshot-flip {
+  text-align:right;
+/*     pointer-events: none; */
+  transform: rotateY(180deg);
+  z-index: -5;
+  width: 15vw;
+  height: 15vw;
+  background-color: rgba(245, 245, 245, 0.5);
+  background-image: url();
+  margin-bottom: 10%;
+  margin-right: 2%;
+  border-radius: 10%;
+  text-align: left;
+  z-index: -10;
+}
+
+	</style>
+</head>
+<body>
+
+<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+
+<div class="container" onclick=showDescription() animationend=hideDescription()
+id="ellag-name">
+  
+<div id="ellag" class="headshot ellar ellag-effect">
+  
+<div id="ellag-description" class="description description-invisible">
+<br>
+  <ul>
+    <li>🔥: <a href="https://www.netflix.com/title/70140391">Greys Anatomy</a></li>
+   
+  <li>🍋
+    <a href="https://docs.google.com/spreadsheets/d/1zW695e7jq-2JxDeV6VKLwqE3ldZrdikgSyu6OwaArEM/edit#gid=0">Google Doc</a></li>
+
+<li>🐙: <a href="https://trello.com/b/TKPEGh4u/ella-g-cs1">Trello</a>
+    </li>
+  </ul>
+
+</div>
+</div>
+ELLA
+</div>
+
+</body>
+
+<script>
+	
+	// DONT CHANGE THIS SECTION!!!!! IF YOU WANT TO EXPERIMENT YOU CAN ADD YOUR OWN JAVASCRIPT UP HERE BUT DON'T CHANGE WHAT'S BELOW PLEASE!
+
+
+
+
+
+
+
+
+/////////////////////////
+//below I'm adding an event listener so that when someone clicks on the on div with the class "your-name" div at the bottom of the headshot, a class is added to the *description* div called "description-apparent," and a class called "description-invisible" is removed. Because of the properties in the description-apparent class, when the div is assigned to this class, it becomes visible in the browser for 15 seconds. Because there is an animation property which, as I wrote it changes the opacity of the description div from 1 back to 0 — the divs with the description-apparent class become visible for 15s. //
+
+var headshot = document.getElementsByClassName("headshot");
+var description = document.getElementsByClassName("description");
+
+//this is the function I call in "onclick" which is referred to in the HTML//
+function showDescription() {
+  
+  console.log(event);
+  var whoAmI = event.target.id;
+  var containerDivChild = event.target.children;
+  var containerGrandchild = event.target.lastElementChild.lastElementChild;
+
+  for (let item of containerDivChild) {
+    item.classList.add("headshot-flip");
+item.classList.remove(item.id+"-effect");
+    setTimeout(function() {
+      item.classList.remove("headshot");
+    }, 500);
+    containerGrandchild.classList.remove("description-invisible");
+    containerGrandchild.classList.add("description-apparent");
+  }
+}
+
+//below I'm adding an event listener so that when the animation ends, the div is re-assigned the class of "description-invisible" and the "description-apparent" class is removed//
+
+for (let item of description) {
+  item.addEventListener("animationend", function() {
+    item.classList.remove("description-apparent");
+    item.classList.add("description-invisible");
+    console.log("ended!");
+  });
+}
+
+for (let item of headshot) {
+  item.addEventListener("animationend", function() {
+        item.classList.add(item.id+"-effect");
+
+    item.classList.remove("headshot-flip");
+    item.classList.add("headshot");
+  });
+}
+
+
+
+</script>
+</html>
