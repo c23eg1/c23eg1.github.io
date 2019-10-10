@@ -6,7 +6,7 @@
 		#pizza{
 		width: 800px;
 		height: 800px;
-		background-image: url("http://www.pngplay.com/wp-content/uploads/2/Cheese-Pizza-Transparent-Background.png");
+		background-image: url("pizza.png");
 		background-repeat: no-repeat;
 		background-size:contain;
 	}
@@ -27,16 +27,14 @@
 </head>
 <body>
 	<div id="pizza" >
+<!-- 		<image src ="pizza.png"/> -->
 		<!-- <div id="pepperoni">
 		</div> -->
-
-
-
 	</div>
 
 	<script type="text/javascript">
 		var pizza= document.getElementById("pizza");
-
+		// var img = document.createElement("pepperoni.png");
 
         function makePepp() {
         var pepp = document.createElement("div");
@@ -45,7 +43,7 @@
         pepp.style.borderRadius = "50%";
         // pepp.style.backgroundColor = "red";
         pepp.style.position = "absolute";
-        pepp.style.backgroundImage = "url(https://i.dlpng.com/static/png/4007679_thumb.png)";
+        pepp.style.backgroundImage = "url('pepperoni.png')";
         pepp.style.backgroundSize = "cover";
 
         
@@ -56,8 +54,8 @@ pizza.addEventListener("mousemove", function(event) {
 
         pizza.appendChild(pepp);
 
-        pepp.style.left = event.clientX - 25 + "px";
-            pepp.style.top = event.clientY - 25 + "px";
+        pepp.style.left = event.clientX - 50 + "px";
+            pepp.style.top = event.clientY - 50 + "px";
 
 
     };
