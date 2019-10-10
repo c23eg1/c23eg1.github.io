@@ -1,0 +1,143 @@
+body {
+
+    font-family: 'Questrial', sans-serif;
+}
+
+#text {
+    font-size: 30px;
+    color: black;
+    font-family: 'Questrial', sans-serif;
+
+}
+
+
+
+.topnav {
+    overflow: hidden;
+    background-color: #ffdef8;
+}
+
+.topnav a {
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ffc9f4;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #000000;
+    color: white;
+}
+
+
+.circle {
+
+    position: absolute;
+}
+
+#one {
+    width: 130px;
+    height: 127px;
+    background-image: url("http://www.clker.com/cliparts/7/m/A/A/h/X/white-star-black-md.png");
+    background-size: cover;
+    left: 60%;
+    top: 30%;
+}
+
+#two {
+    width: 210px;
+    height: 205px;
+    background-image: url("http://www.clker.com/cliparts/7/m/A/A/h/X/white-star-black-md.png");
+
+    left: 20%;
+    top: 50%;
+    background-size: cover;
+}
+
+
+#three {
+    width: 54px;
+    height: 53px;
+    background-image: url("http://www.clker.com/cliparts/7/m/A/A/h/X/white-star-black-md.png");
+    background-size: cover;
+    left: 10%;
+    top: 30%;
+}
+
+#four {
+    width: 30px;
+    height: 30px;
+    background-image: url("http://www.clker.com/cliparts/7/m/A/A/h/X/white-star-black-md.png");
+    background-size: cover;
+    left: 60%;
+    top: 80%;
+}
+
+#five {
+    width: 260px;
+    height: 250px;
+    background-image: url("http://www.clker.com/cliparts/7/m/A/A/h/X/white-star-black-md.png");
+    background-size: cover;
+    opacity: 0.6;
+    left: 60%;
+    top: 80%;
+
+
+}
+
+/*        below is the stuff for the journal page
+*/
+h1 {
+    font-family: 'Questrial', sans-serif;
+    color: #8c8c8c;
+    font-size: 40px;
+}
+
+
+/*.topnav {
+    overflow: hidden;
+    background-color: #ffdef8;
+}
+
+.topnav a {
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ffc9f4;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #000000;
+    color: white;
+}*/
+
+
+
+.date {
+    font-size: 20px;
+    color: #bfbfbf;
+}
+
+.indie-text{
+      font-family: 'Indie Flower', cursive;
+
+}
+
+p {
+    font-family: 'Indie Flower', cursive;
+
+}
