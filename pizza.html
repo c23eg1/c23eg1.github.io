@@ -29,6 +29,10 @@
 
     #olive{
     	background-image: url(olive.png)
+    }    
+
+    #pineapple{
+    	background-image: url(pineapple.png)
     }
 
     .topping {
@@ -57,6 +61,7 @@
     <div class="topping" id="broc"></div>
     <div class="topping" id="shroom"></div>
     <div class="topping" id="olive"></div>
+    <div class="topping" id="pineapple"></div>
     <div id="pizza">
         <!-- 		<image src ="pizza.png"/> -->
         <!-- <div id="pepperoni">
@@ -119,6 +124,12 @@
     olive.addEventListener("click", function() {
 
         image = "olive.png"
+    });
+
+
+    pineapple.addEventListener("click", function() {
+
+        image = "pineapple.png"
     });
 
     pizza.addEventListener("click", makeTopping);
