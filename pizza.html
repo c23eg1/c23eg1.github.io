@@ -15,7 +15,7 @@
     #pepp {
 
         background-image: url(pepperoni.png);
-        background-size:cover;
+        background-size: cover;
     }
 
     #broc {
@@ -23,16 +23,24 @@
         background-image: url(broc.png);
     }
 
-    #shroom{
-    	background-image: url(shroom.png)
+    #shroom {
+        background-image: url(shroom.png)
     }
 
-    #olive{
-    	background-image: url(olive.png)
-    }    
+    #olive {
+        background-image: url(olive.png)
+    }
 
-    #pineapple{
-    	background-image: url(pineapple.png)
+    #pineapple {
+        background-image: url(pineapple.png)
+    }
+
+    #onion {
+        background-image: url(onion.png);
+    }
+
+    #bacon {
+        background-image: url(bacon.png);
     }
 
     .topping {
@@ -45,14 +53,6 @@
         position: relative;
 
     }
-
-    /*#shroom {
-			width: 100px;
-			height: 100px;
-			background-image: url(broc.jpg);
-			background-size: contain;
-			background-repeat: no-repeat;
-}*/
     </style>
 </head>
 
@@ -62,27 +62,17 @@
     <div class="topping" id="shroom"></div>
     <div class="topping" id="olive"></div>
     <div class="topping" id="pineapple"></div>
-    <div id="pizza">
-        <!-- 		<image src ="pizza.png"/> -->
-        <!-- <div id="pepperoni">
-		</div> -->
-    </div>
+    <div class="topping" id="onion"></div>
+    <div class="topping" id="bacon"></div>
+    <div id="pizza"></div>
     <script type="text/javascript">
     var image;
-    var pizza = document.getElementById("pizza");
-
-    var broc = document.getElementById("broc");
-    var shroom = document.getElementById("shroom");
-    var olive = document.getElementById("olive");
-    var pepp = document.getElementById("pepp");
-
 
     function makeTopping() {
         var pepp = document.createElement("pepperoni");
         pepp.style.width = "100px";
         pepp.style.height = "100px";
         pepp.style.borderRadius = "50%";
-        // pepp.style.backgroundColor = "red";
         pepp.style.position = "absolute";
         pepp.style.backgroundImage = "url(" + image + ")";
         pepp.style.backgroundSize = "cover";
@@ -131,6 +121,15 @@
 
         image = "pineapple.png"
     });
+    onion.addEventListener("click", function() {
+
+        image = "onion.png"
+    });
+    bacon.addEventListener("click", function() {
+
+        image = "bacon.png"
+    });
+
 
     pizza.addEventListener("click", makeTopping);
     </script>
