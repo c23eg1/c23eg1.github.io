@@ -4,7 +4,6 @@
 <head>
     <title></title>
     <style type="text/css">
-
     #scoop {
         width: 300px;
         height: 600px;
@@ -17,74 +16,99 @@
     }
 
     #cherry {
-    	background-image: url("cher.png");
-    	background-size: cover;
-    	width: 100px;
-		height:100px;
-		background-repeat: no-repeat;
-		display: inline-block;
-		position: relative;
-        background-position: center;
-    }
-
-    #sprinkles {
-                background-image: url("sprinkles2.png");
+        background-image: url("cher.png");
         background-size: cover;
         width: 100px;
-        height:100px;
+        height: 100px;
         background-repeat: no-repeat;
         display: inline-block;
         position: relative;
         background-position: center;
     }
 
+    #sprinkles {
+        background-image: url("sprinkles2.png");
+        background-size: cover;
+        width: 100px;
+        height: 100px;
+        background-repeat: no-repeat;
+        display: inline-block;
+        position: relative;
+        background-position: center;
+    }
 
-
-
+    #red {
+        background-image: url("red.png");
+        background-size: cover;
+        width: 75px;
+        height: 75px;
+        background-repeat: no-repeat;
+        display: inline-block;
+        position: relative;
+        background-position: center;
+    }
+    #blue {
+        background-image: url("blue.png");
+        background-size: cover;
+        width: 75px;
+        height: 75px;
+        background-repeat: no-repeat;
+        display: inline-block;
+        position: relative;
+        background-position: center;
+    }
     </style>
 </head>
 
 <body>
-
     <div id="cherry"></div>
     <div id="sprinkles"></div>
-        <div id="scoop"></div>
-
+    <div id="scoop"></div>
+    <div id="red"></div>
+    <div id="blue"></div>
     <script type="text/javascript">
-    	var image;
-    	// var scoop = document.getElementById("scoop")
+    var image;
+    // var scoop = document.getElementById("scoop")
 
     function makeTopping() {
         var topping = document.createElement("top")
-        topping.style.width = "100px";
-        topping.style.height = "100px";
+        topping.style.width = "75px";
+        topping.style.height = "75px";
         topping.style.borderRadius = "50%";
         topping.style.position = "absolute";
         topping.style.backgroundImage = "url(" + image + ")";
         topping.style.backgroundSize = "cover";
 
-        scoop.addEventListener("mousemove", function(event) {console.log(event.clientX, event.clientY);
-       });
+        scoop.addEventListener("mousemove", function(event) {
+            console.log(event.clientX, event.clientY);
+        });
 
         scoop.appendChild(topping);
 
         topping.style.left = event.clientX - 50 + "px";
-        topping.style.top = event.clientY  - 150 + "px";
+        topping.style.top = event.clientY - 150 + "px";
     };
 
 
-        cherry.addEventListener("click", function() {
+    cherry.addEventListener("click", function() {
 
         image = "cher.png"
     });
 
-                sprinkles.addEventListener("click", function() {
+    sprinkles.addEventListener("click", function() {
 
         image = "sprinkles2.png"
     });
+    red.addEventListener("click", function() {
 
+        image = "red.png"
+    });
+    blue.addEventListener("click", function() {
 
-	scoop.addEventListener("click", makeTopping);
+        image = "blue.png"
+    });
+
+    scoop.addEventListener("click", makeTopping);
     </script>
 </body>
 
