@@ -52,6 +52,7 @@
         display: inline-block;
         position: relative;
 
+
     }
     </style>
 </head>
@@ -68,18 +69,26 @@
     <script type="text/javascript">
     var image;
 
+
+
+
+
     function makeTopping() {
         var pepp = document.createElement("pepperoni");
+        var angle = Math.floor((Math.random() * 360) + 1);
         pepp.style.width = "100px";
         pepp.style.height = "100px";
         pepp.style.borderRadius = "50%";
         pepp.style.position = "absolute";
         pepp.style.backgroundImage = "url(" + image + ")";
         pepp.style.backgroundSize = "cover";
+        pepp.style.transform = "rotate("
+        + angle + "deg)";
+
 
 
         pizza.addEventListener("mousemove", function(event) {
-            console.log(event.clientX, event.clientY);
+            console.log(event.clientX, event.clientY)
 
         });
 
