@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#box{
+			width:500px;
+			height:500px;
+			background-color: blue;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+	<div id="color"></div>
+
+	<script type="text/javascript">
+		
+// function changeColor(){
+// var box = document.getElementById("box")
+
+// box.addEventListener("mousemove", function() {
+//             console.log(event)
+
+
+box.addEventListener("click", function(){
+	    var x = Math.floor(Math.random() * 256);
+    var y = Math.floor(Math.random() * 256);
+    var z = Math.floor(Math.random() * 256);
+    var color = "rgb(" + x + "," + y + "," + z + ")"
+	box.innerText = "hi!"
+	box.style.backgroundColor="rgb(" + x + "," + y + "," + z + ")"
+	console.log(event)
+});
+
+
+
+	</script>
+</body>
+</html>
