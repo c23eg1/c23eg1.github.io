@@ -6,7 +6,7 @@
 		#box{
 			width:500px;
 			height:500px;
-			background-color: blue;
+			background-color: white;
 		}
 
 
@@ -26,12 +26,15 @@
 
 
 box.addEventListener("click", function(){
-	    var x = Math.floor(Math.random() * 256);
-    var y = Math.floor(Math.random() * 256);
-    var z = Math.floor(Math.random() * 256);
-    var color = "rgb(" + x + "," + y + "," + z + ")"
+	// var x = Math.floor(Math.random() * 256);
+ //    var y = Math.floor(Math.random() * 256);
+ //    var z = Math.floor(Math.random() * 256);
+ 	var x = event.clientX;
+    var y = event.clientY;
+    var z = event.clientY;
+
 	box.innerText = "hi!"
-	box.style.backgroundColor="rgb(" + x + "," + y + "," + z + ")"
+	box.style.backgroundColor="rgb("+ x + "," + y + ",100)"
 	console.log(event)
 });
 
