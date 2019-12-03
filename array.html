@@ -3,35 +3,96 @@
 <head>
 	<title></title>
 	<style type="text/css">
-		#emoji{
-			width:500px;
-			height:500px;
+		#pully{
+			width:50px;
+			height:150px;
 			background-position:center;
 			background-size:contain;
 			background-repeat:no-repeat;
-			background-color: lightblue;
+			background-image: url("pully.jpg");
+			display:inline-block;
+		}
+
+		#emoji{
+			width:150px;
+			height:150px;
+			background-position:center;
+			background-size:contain;
+			background-repeat:no-repeat;
+			background-color: yellow;
+			display:inline-block;
 
 		}
+		#emoji1{
+			width:150px;
+			height:150px;
+			background-position:center;
+			background-size:contain;
+			background-repeat:no-repeat;
+			background-color: blue;
+			display:inline-block;
+
+		}
+		#emoji2{
+			width:150px;
+			height:150px;
+			background-position:center;
+			background-size:contain;
+			background-repeat:no-repeat;
+			background-color: green;
+			display:inline-block;
+
+		}
+
+		#writing{
+						width:500px;
+			height:500px;
+			font-size: 100px;
+		}
+
 	</style>
 </head>
 <body>
 
 	<div id="emoji"></div>
+	<div id="emoji1"></div>
+	<div id="emoji2"></div>
+		<div id="pully"></div>
+		<div id="writing"></div>
 
 	<script type="text/javascript">
 		
-var emoji = document.getElementById("emoji");
-var face = ["url(https://i.pinimg.com/originals/2e/71/f6/2e71f6086d67b8d33d55e58cccf53401.jpg)", "url(https://i.pinimg.com/originals/da/8c/21/da8c2163061be58d770f6f9af78258e8.png)", "url(https://i.pinimg.com/originals/85/6c/72/856c72c52a0be9efbc5315927e1fff85.png)", "url(https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/loudly-crying-face.png", "url(https://i.kym-cdn.com/photos/images/facebook/001/067/774/edb.png)", "url(https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/81/kaaba_1f54b.png)","url(https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/114/woman-genie_1f9de-200d-2640-fe0f.png)","url(https://media.gq.com/photos/596cc8b705b12609907480d7/1:1/w_700,h_700,c_limit/emoji_update_2017_10.png)", "url(https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/114/grinning-face-with-star-eyes_1f929.png","url(https://cdn.images.express.co.uk/img/dynamic/59/590x/secondary/Apple-Peach-Emoji-722601.jpg)"];
+
+var face = ["url(kaaba.png)", "url(pig.png)", "url(angel.png)", "url(laugh.png)", "url(monkey.png)","url(puke.png)","url(smile.png)", "url(money.png)","url(cowboy.png)", "url(crazy.png)"];
+var pully = document.getElementById("pully")
+pully.addEventListener("click",function(){
+	randomNumber = Math.round(Math.random()*10)
+	randomNumber1 = Math.round(Math.random()*10)
+	randomNumber2 = Math.round(Math.random()*10)
+	var emoji = document.getElementById("emoji");
+	var emoji2 = document.getElementById("emoji2");
+	var emoji1 = document.getElementById("emoji1");
+	var writing = document.getElementById("writing")
+	emoji.style.backgroundImage = face[randomNumber];
+	emoji1.style.backgroundImage = face[randomNumber1];
+	emoji2.style.backgroundImage = face[randomNumber2];
+	// if(emoji.style.backgroundImage == emoji1.style.backgroundImage){writing.innerText="yay"}
+	// if(emoji2.style.backgroundImage == emoji1.style.backgroundImage){writing.innerText="yay"}
+	// if(emoji.style.backgroundImage == emoji2.style.backgroundImage){writing.innerText="yay"}
+
+		if (emoji.style.backgroundImage == emoji1.style.backgroundImage) {writing.innerText="yay"} else {	if (emoji1.style.backgroundImage == emoji2.style.backgroundImage) {writing.innerText="yay"} else {		if (emoji.style.backgroundImage == emoji2.style.backgroundImage) {writing.innerText="yay"} else {		if (emoji.style.backgroundImage == emoji1.style.backgroundImage == emoji2.style.backgroundImage) {writing.innerText = "WOOHHOOO"} else {writing.innerText=""}}}}
 
 
-emoji.addEventListener("click", function(){
-	randomNumber = Math.round(Math.random()*9)
 
-	console.log(event)
-	emoji.style.backgroundImage = face[randomNumber]
+
+
 });
 
-	</script>
+
+
+
+
+</script>
 
 </body>
 </html>
