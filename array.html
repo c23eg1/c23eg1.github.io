@@ -54,10 +54,18 @@
         font-size: 50px;
     }
 
+    #moneysign{
+        width: 25px;
+        height: 100px;
+        font-size: 50px;
+        display: inline-block;
+
+    }
     #score{
     	width: 100px;
-    	height: 100px;
+    	height: 50px;
     	font-size: 50px;
+        display: inline-block;
 
     }
     </style>
@@ -68,11 +76,19 @@
     <div id="emoji1"></div>
     <div id="emoji2"></div>
     <div id="pully"></div>
-    <div id="writing"></div>
+            <div id = "moneysign">$</div>
     <div id = "score"></div>
+    <div id="writing"></div>
+
     <script type="text/javascript">
-    var face = ["url(kaaba.png)", "url(pig.png)", "url(angel.png)", "url(laugh.png)", "url(monkey.png)", "url(puke.png)", "url(smile.png)", "url(money.png)", "url(cowboy.png)", "url(crazy.png)"];
+    var face = ["url(kaaba.png)", "url(pig.png)", "url(angel.png)", "url(laugh.png)", "url(monkey.png)", "url(puke.png)", "url(smile.png)","url(money.png)", "url(cowboy.png)", "url(crazy.png)" ];
+    "url(money.png)", "url(cowboy.png)", "url(crazy.png)"
     var pully = document.getElementById("pully")
+    var score = document.getElementById("score")
+    score.innerText = Number("0");
+    // var moneysign = document.getElementById("moneysign")
+    // moneysign = "$"
+
     pully.addEventListener("click", function() {
         randomNumber = Math.round(Math.random() * 10)
         randomNumber1 = Math.round(Math.random() * 10)
@@ -81,22 +97,20 @@
         var emoji2 = document.getElementById("emoji2");
         var emoji1 = document.getElementById("emoji1");
         var writing = document.getElementById("writing")
-        var score = document.getElementById("score")
 
         emoji.style.backgroundImage = face[randomNumber];
         emoji1.style.backgroundImage = face[randomNumber1];
         emoji2.style.backgroundImage = face[randomNumber2];
-
-
-        if (emoji.style.backgroundImage == emoji1.style.backgroundImage) { writing.innerText = "yay", score.innerText= "$" + score.innerText + 10   } 
+if (emoji.style.backgroundImage == emoji1.style.backgroundImage == emoji2.style.backgroundImage) { writing.innerText = "OMG YOU GOT ALL THREE", score.innerText = score.innerText + Number("10"); } 
+    else{
+        if (emoji.style.backgroundImage == emoji1.style.backgroundImage) { writing.innerText = "yay, you got two!", score.innerText = Number(score.innerText) + Number("10");   } 
         	else { 
-        		if (emoji1.style.backgroundImage == emoji2.style.backgroundImage) { writing.innerText = "yay", score.innerText= "$" + score.innerText + 10     } 
+        		if (emoji1.style.backgroundImage == emoji2.style.backgroundImage) { writing.innerText = "yay, you got two!", score.innerText = Number(score.innerText) + Number("10");} 
         			else { 
-        				if (emoji.style.backgroundImage == emoji2.style.backgroundImage) {  writing.innerText = "yay", score.innerText= "$" + score.innerText + 10  } 
-        					else { 
-        						if (emoji.style.backgroundImage == emoji1.style.backgroundImage == emoji2.style.backgroundImage) { writing.innerText = "WOOHHOOO" } 
-        							else { writing.innerText = "" } } } }
-
+        				if (emoji.style.backgroundImage == emoji2.style.backgroundImage) {  writing.innerText = "yay, you got two", score.innerText = Number(score.innerText) + Number("10");  } 
+        					else { writing.innerText = "",score.innerText = score.innerText } } } }
+    
+        				
 
 
 
