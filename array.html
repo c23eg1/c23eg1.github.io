@@ -1,98 +1,108 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title></title>
-	<style type="text/css">
-		#pully{
-			width:50px;
-			height:150px;
-			background-position:center;
-			background-size:contain;
-			background-repeat:no-repeat;
-			background-image: url("pully.jpg");
-			display:inline-block;
-		}
+    <title></title>
+    <style type="text/css">
+    #pully {
+        width: 50px;
+        height: 150px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url("pully.jpg");
+        display: inline-block;
 
-		#emoji{
-			width:150px;
-			height:150px;
-			background-position:center;
-			background-size:contain;
-			background-repeat:no-repeat;
-			background-color: yellow;
-			display:inline-block;
+    }
 
-		}
-		#emoji1{
-			width:150px;
-			height:150px;
-			background-position:center;
-			background-size:contain;
-			background-repeat:no-repeat;
-			background-color: blue;
-			display:inline-block;
+    #emoji {
+        width: 150px;
+        height: 150px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-block;
+        border-style: solid;
 
-		}
-		#emoji2{
-			width:150px;
-			height:150px;
-			background-position:center;
-			background-size:contain;
-			background-repeat:no-repeat;
-			background-color: green;
-			display:inline-block;
+    }
 
-		}
+    #emoji1 {
+        width: 150px;
+        height: 150px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-block;
+        border-style: solid;
 
-		#writing{
-						width:500px;
-			height:500px;
-			font-size: 100px;
-		}
+    }
 
-	</style>
+    #emoji2 {
+        width: 150px;
+        height: 150px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-block;
+        border-style: solid;
+
+    }
+
+    #writing {
+        width: 500px;
+        height: 100px;
+        font-size: 50px;
+    }
+
+    #score{
+    	width: 100px;
+    	height: 100px;
+    	font-size: 50px;
+
+    }
+    </style>
 </head>
+
 <body>
+    <div id="emoji"></div>
+    <div id="emoji1"></div>
+    <div id="emoji2"></div>
+    <div id="pully"></div>
+    <div id="writing"></div>
+    <div id = "score"></div>
+    <script type="text/javascript">
+    var face = ["url(kaaba.png)", "url(pig.png)", "url(angel.png)", "url(laugh.png)", "url(monkey.png)", "url(puke.png)", "url(smile.png)", "url(money.png)", "url(cowboy.png)", "url(crazy.png)"];
+    var pully = document.getElementById("pully")
+    pully.addEventListener("click", function() {
+        randomNumber = Math.round(Math.random() * 10)
+        randomNumber1 = Math.round(Math.random() * 10)
+        randomNumber2 = Math.round(Math.random() * 10)
+        var emoji = document.getElementById("emoji");
+        var emoji2 = document.getElementById("emoji2");
+        var emoji1 = document.getElementById("emoji1");
+        var writing = document.getElementById("writing")
+        var score = document.getElementById("score")
 
-	<div id="emoji"></div>
-	<div id="emoji1"></div>
-	<div id="emoji2"></div>
-		<div id="pully"></div>
-		<div id="writing"></div>
-
-	<script type="text/javascript">
-		
-
-var face = ["url(kaaba.png)", "url(pig.png)", "url(angel.png)", "url(laugh.png)", "url(monkey.png)","url(puke.png)","url(smile.png)", "url(money.png)","url(cowboy.png)", "url(crazy.png)"];
-var pully = document.getElementById("pully")
-pully.addEventListener("click",function(){
-	randomNumber = Math.round(Math.random()*10)
-	randomNumber1 = Math.round(Math.random()*10)
-	randomNumber2 = Math.round(Math.random()*10)
-	var emoji = document.getElementById("emoji");
-	var emoji2 = document.getElementById("emoji2");
-	var emoji1 = document.getElementById("emoji1");
-	var writing = document.getElementById("writing")
-	emoji.style.backgroundImage = face[randomNumber];
-	emoji1.style.backgroundImage = face[randomNumber1];
-	emoji2.style.backgroundImage = face[randomNumber2];
-	// if(emoji.style.backgroundImage == emoji1.style.backgroundImage){writing.innerText="yay"}
-	// if(emoji2.style.backgroundImage == emoji1.style.backgroundImage){writing.innerText="yay"}
-	// if(emoji.style.backgroundImage == emoji2.style.backgroundImage){writing.innerText="yay"}
-
-		if (emoji.style.backgroundImage == emoji1.style.backgroundImage) {writing.innerText="yay"} else {	if (emoji1.style.backgroundImage == emoji2.style.backgroundImage) {writing.innerText="yay"} else {		if (emoji.style.backgroundImage == emoji2.style.backgroundImage) {writing.innerText="yay"} else {		if (emoji.style.backgroundImage == emoji1.style.backgroundImage == emoji2.style.backgroundImage) {writing.innerText = "WOOHHOOO"} else {writing.innerText=""}}}}
+        emoji.style.backgroundImage = face[randomNumber];
+        emoji1.style.backgroundImage = face[randomNumber1];
+        emoji2.style.backgroundImage = face[randomNumber2];
 
 
-
-
-
-});
+        if (emoji.style.backgroundImage == emoji1.style.backgroundImage) { writing.innerText = "yay", score.innerText= "$" + score.innerText + 10   } 
+        	else { 
+        		if (emoji1.style.backgroundImage == emoji2.style.backgroundImage) { writing.innerText = "yay", score.innerText= "$" + score.innerText + 10     } 
+        			else { 
+        				if (emoji.style.backgroundImage == emoji2.style.backgroundImage) {  writing.innerText = "yay", score.innerText= "$" + score.innerText + 10  } 
+        					else { 
+        						if (emoji.style.backgroundImage == emoji1.style.backgroundImage == emoji2.style.backgroundImage) { writing.innerText = "WOOHHOOO" } 
+        							else { writing.innerText = "" } } } }
 
 
 
 
 
-</script>
-
+    });
+    </script>
 </body>
+
 </html>
