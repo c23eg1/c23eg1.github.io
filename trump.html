@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#trump{
+			width: 200px;
+			height: 200px;
+			background-image: url(trump.png);
+			background-repeat: no-repeat;
+		}
+		p {
+  voice-family: male;
+  richness: 80;
+/*  cue-before: url("beep.au")*/
+}
+	</style>
+</head>
+<body>
+	<div id="trump"></div>
+	<p id ="countdown"></p>
+	<script type="text/javascript">
+		
+
+var daystill = new Date("Jan 20, 2021 0:0:0").getTime();
+
+
+var x = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = daystill - now;
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("countdown").innerText = days + " days, " + hours + " hours, "
+  + minutes + " minutes, " + seconds + " seconds ";
+    
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "FINISHED";
+  }
+}, 1000);
+
+        trump.addEventListener("click", function(event) {
+            console.log(event)
+
+        });
+
+  //       function say(m) {
+  // var msg = new SpeechSynthesisUtterance("hi");
+  // var voices = window.speechSynthesis.getVoices();
+  // // msg.voice = voices[10];
+  // // msg.voiceURI = "native";
+  // // msg.volume = 1;
+  // // msg.rate = 1;
+  // // msg.pitch = 0.8;
+  // // msg.text = m;
+  // // msg.lang = 'en-US';
+  // speechSynthesis.speak(msg);
+
+                // trump.addEventListener("click", say)};
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+    .dot {
+        width: 50px;
+        height: 50px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-block;
+        position: relative;
+        border-radius: 25px;
+
+    }
+
+    #clear {
+        width: 100px;
+        height: 100px;
+        background-image: url("clear.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="dot">
+    </div>
+    <div id="clear"></div>
+    <script type="text/javascript">
+    function makeDot() {
+        var color = ["blue", "red", "orange", "green", "yellow", "purple", "pink"];
+        var dot = document.createElement("div");
+        var randomNumber = Math.round(Math.random() * 8)
+        document.body.appendChild(dot);
+        dot.style.backgroundColor = color[randomNumber];
+        dot.classList.add("dot");
+        dot.style.opacity = "100";
+        dot.style.left = Math.round((Math.random() * 1000)) + "px";
+        dot.style.top = Math.round((Math.random() * 1000)) + "px";
+        document.body.appendChild(dot);
+        var clear = document.getElementById("clear")
+        clear.addEventListener("click", function() {
+            dot.style.opacity = "0";
+
+        });
+    }
+    for (var i = 0; i < 100; i = i + 1) {
+        makeDot();
+    }
+
+
+    function clearDots() {};
+    </script>
+</body>
+
+</html>
