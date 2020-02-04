@@ -10,7 +10,7 @@
         background-size: contain;
         background-repeat: no-repeat;
         display: inline-block;
-        position: absolute;
+        position: relative;
         border-radius: 25px;
 
     }
@@ -26,10 +26,10 @@
 </head>
 
 <body>
-    <div class="dot">
-    </div>
+    
     <div id="clear"></div>
     <script type="text/javascript">
+
     function makeDot() {
         var color = ["blue", "red", "orange", "green", "yellow", "purple", "pink"];
         var dot = document.createElement("div");
@@ -38,21 +38,34 @@
         dot.style.backgroundColor = color[randomNumber];
         dot.classList.add("dot");
         dot.style.opacity = "100";
-        dot.style.left = Math.round((Math.random() * 1000)) + "px";
-        dot.style.top = Math.round((Math.random() * 1000)) + "px";
+        // dot.style.left = Math.round((Math.random() * 1000)) + "px";
+        // dot.style.top = Math.round((Math.random() * 1000)) + "px";
         document.body.appendChild(dot);
         var clear = document.getElementById("clear")
         clear.addEventListener("click", function() {
             dot.style.opacity = "0";
+        })
 
-        });
+function move() {
+     dot.style.left = Math.round(Math.random() * 1000) + "px";
+        dot.style.top = Math.round(Math.random() * 1000) + "px";
+};
+
+setInterval(move,100);
+
+
+
+
     }
-    for (var i = 0; i < 100; i = i + 1) {
+    for (var i = 0; i < 100; i++) {
         makeDot();
     }
 
 
-    function clearDots() {};
+
+
+
+
     </script>
 </body>
 
