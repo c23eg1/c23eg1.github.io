@@ -43,8 +43,6 @@
         dot.classList.add("dot");
         dot.style.opacity = "100";
         
-        // dot.style.left = Math.round((Math.random() * 1000)) + "px";
-        // dot.style.top = Math.round((Math.random() * 1000)) + "px";
         document.body.appendChild(dot);
 
     dot.addEventListener("click", function() {
@@ -66,7 +64,7 @@ function move() {
         dot.style.top = Math.round(Math.random() * 1000) + "px";
 };
 
-setInterval(move,1000);
+setInterval(move,100);
 
 
 
@@ -75,7 +73,7 @@ setInterval(move,1000);
 
 
     }
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < 1000; i++) {
         makeDot();
     }
 
