@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+    .heart {
+        width: 150px;
+        height: 80px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-block;
+        position: absolute;
+        z-index: -1;
+        color: red;
+        text-align: center;
+        font-size: 20px;
+        /*        background-color: red;*/
+        padding-top: 45px;
+        /*padding-left:5px;*/
+        padding-right: 100px;
+
+        /*       background-image: url("heart2.png");*/
+
+    }
+
+    #logo {
+        background-image: url("sweetheart.gif");
+        width: 500px;
+        height: 50px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-block;
+
+    }
+
+    #line {
+        top: -100px;
+        height: 50px;
+        font-size: 40px;
+    }
+    </style>
+</head>
+
+<body>
+    <h1 id="line">You are my <div id="logo"></div>
+    </h1>
+<br>
+    <div>(click anywhere to read the messages!)</div>
+    <script type="text/javascript">
+    function makeHeart() {
+        var message = ["i love you", "you are the best", "you are pretty dope", "you always make me laugh", "you always cheer me up", "you are beautiful", "🕋🕋🕋🕋🕋🕋", "ily best frand", "you are the yang to my grey", "you are the alexa to my katie", "pottery gang 4 life", "love u more than liam"];
+
+
+        var image = ["url(green.png)", "url(blue.png)", "url(purple.png)", "url(pink1.png)", "url(orange.png)", "url(yellow.png)"];
+        
+
+        var randomNumber2 = Math.round(Math.random() * 5)
+        
+
+        var randomNumber = Math.round(Math.random() * 10)
+       
+
+        var heart = document.createElement("div");
+        
+
+        document.body.appendChild(heart);
+
+
+
+        heart.classList.add("heart");
+        heart.style.opacity = "100";
+        heart.innerText = message[randomNumber];
+        heart.style.backgroundImage = image[randomNumber2];
+
+        document.body.appendChild(heart);
+
+
+
+        var move = setInterval(move, 300);
+
+        document.addEventListener("click", function() {
+            // heart.style.opacity = "0";
+            //  var x;
+            // x = 10;
+            clearInterval(move);
+            console.log(event)
+
+        })
+
+        function move() {
+            heart.style.left = Math.round(Math.random() * 950) + "px";
+            heart.style.top = Math.round(Math.random() * 600) + "px";
+        };
+
+
+
+    }
+    for (var i = 0; i < 20; i++) {
+        makeHeart();
+    }
+
+
+    // idea: make a button that makes the hearts all stop
+    // then each heart has a different message one it
+    </script>
+</body>
+
+</html>
