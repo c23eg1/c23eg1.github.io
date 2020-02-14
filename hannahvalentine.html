@@ -14,11 +14,11 @@
         z-index: -1;
         color: red;
         text-align: center;
-        font-size: 20px;
+        font-size: 15px;
         /*        background-color: red;*/
         padding-top: 45px;
         /*padding-left:5px;*/
-        padding-right: 100px;
+        padding-left: -1000%;
 
         /*       background-image: url("heart2.png");*/
 
@@ -31,7 +31,7 @@
         background-size: contain;
         background-repeat: no-repeat;
         display: inline-block;
-        margin-top: 0%;
+    
 
     }
 
@@ -39,15 +39,17 @@
         
         height: 60px;
         font-size: 40px;
-        background-color: black;
-        color: white;
+        background-color: lightpink;
+        color: red;
+
         /*position: absolute;*/
     }
 
     #read{
         margin-top: -4.5%;
-        color: white;
-        background-color: black;
+        color: red;
+        background-color: lightpink;
+        position:relative;
          /*position: absolute;*/
     }
     </style>
@@ -57,10 +59,10 @@
     <h1 id="line">You are my <div id="logo"></div>
     </h1>
 <br>
-    <div id="read">(click anywhere to read the messages!)</div>
+    <div id="read">(click anywhere to read the inside jokes!)</div>
     <script type="text/javascript">
     function makeHeart() {
-        var message = ["i love you", "you are the best", "you are pretty dope", "you always make me laugh", "you always cheer me up", "you are beautiful", "🕋🕋🕋🕋🕋🕋", "ily best frand", "you are the yang to my grey", "you are the alexa to my katie", "pottery gang 4 life", "love u more than liam"];
+        var message = ["i love you more than the nurses","bird box", "you are pretty dope", "you always make me laugh", "fresh and co rice pudding doe", "you are beautiful", "🕋🕋🕋🕋🕋🕋", "ily best frand", "you are the yang to my grey", "you are the alexa to my katie", "pottery gang 4 life", "love u more than liam","love u more than u love ms dobbins", "hannah cenedELLA", "ella gruenstEYEn","yellow goose"];
 
 
         var image = ["url(green.png)", "url(blue.png)", "url(purple.png)", "url(pink1.png)", "url(orange.png)", "url(yellow.png)"];
@@ -69,7 +71,7 @@
         var randomNumber2 = Math.round(Math.random() * 5)
         
 
-        var randomNumber = Math.round(Math.random() * 10)
+        var randomNumber = Math.round(Math.random() * 14)
        
 
         var heart = document.createElement("div");
@@ -107,7 +109,7 @@
 
 
     }
-    for (var i = 0; i < 20; i++) {
+    for (var i = 0; i < 30; i++) {
         makeHeart();
     }
 
