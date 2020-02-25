@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#cake{
+display: inline-block;
+background-image: url("cake.jpg");
+width: 300px;
+height: 300px;
+background-repeat: no-repeat;
+background-size: contain;
+		}
+		#cupcake{
+display: inline-block;
+background-image: url("cupcake.jpg");
+width: 300px;
+height: 300px;
+background-repeat: no-repeat;
+background-size: contain;
+		}
+		#pizza{
+display: inline-block;
+background-image: url("pizza.jpg");
+width: 300px;
+height: 300px;
+background-repeat: no-repeat;
+background-size: contain;
+		}
+		#pasta{
+display: inline-block;
+background-image: url("pasta.jpg");
+width: 300px;
+height: 300px;
+background-repeat: no-repeat;
+background-size: contain;
+		}
+		#yes{
+display: inline-block;
+background-image: url("yes.jpg");
+width: 300px;
+height: 300px;
+background-repeat: no-repeat;
+background-size: contain;
+		}
+		#no{
+display: inline-block;
+background-image: url("no.jpg");
+width: 300px;
+height: 300px;
+background-repeat: no-repeat;
+background-size: contain;
+		}
+		#submit{
+background-image: url("submit.png");
+width: 300px;
+height: 300px;
+background-repeat: no-repeat;
+background-size: contain;
+		}
+				#kinda{
+background-image: url("kinda.png");
+width: 300px;
+height: 300px;
+background-repeat: no-repeat;
+background-size: contain;
+display: inline-block;
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<h1>Find out your personality based on your food choices</h1>
+	<h2>Would you rather cake or cupcakes?</h2>
+		<div id = "cake"></div>
+		<div id = "cupcake"></div>
+	<h2>Would you rather pizza or pasta?</h2>
+		<div id = "pizza"></div>
+		<div id = "pasta"></div>
+	<h2>Do you like tomatoes?</h2>
+		<div id = "yes"></div>
+		<div id = "no"></div>
+		<div id="kinda"></div>
+
+<div id="submit"></div>
+</body>
+
+
+
+<script type="text/javascript">
+	var x=0
+	var cake = document.getElementById("cake");
+	var cupcake = document.getElementById("cupcake");
+	var pizza = document.getElementById("pizza");
+	var pasta = document.getElementById("pasta");
+	var yes = document.getElementById("yes");
+	var no = document.getElementById("no");
+		var kinda = document.getElementById("kinda");
+		var submit = document.getElementById("submit");
+		submit.style.backgroundImage="url(submit.png)"
+cake.addEventListener("click",function(){
+cake.style.opacity = ".3";
+cupcake.style.opacity = ".3"
+
+	x = x+5;
+});
+		cupcake.addEventListener("click",function(){
+cake.style.opacity = ".3";
+cupcake.style.opacity = ".3"
+	x = x-5;
+});
+			pizza.addEventListener("click",function(){
+pizza.style.opacity = ".3";
+pasta.style.opacity = ".3"
+	x = x-5;
+});
+				pasta.addEventListener("click",function(){
+pizza.style.opacity = ".3";
+pasta.style.opacity = ".3"
+	x = x+5;
+});
+					yes.addEventListener("click",function(){
+yes.style.opacity = ".3";
+no.style.opacity = ".3"
+kinda.style.opacity =".3"
+	x = x+5;
+});
+						no.addEventListener("click",function(){
+yes.style.opacity = ".3";
+no.style.opacity = ".3"
+kinda.style.opacity =".3"
+	x = x-5;
+});
+						kinda.addEventListener("click",function(){
+yes.style.opacity = ".3";
+no.style.opacity = ".3"
+kinda.style.opacity =".3"
+	x = x +1;
+});
+
+
+
+
+
+
+submit.addEventListener("click",function(){
+	console.log(event)
+	// if(x=0){
+	// submit.style.backgroundImage = "url(ok.jpg)"}
+if (x<0){
+submit.style.backgroundImage = "url(cool.png)"
+}
+if (x>0){
+submit.style.backgroundImage = "url(rude.png)"
+}
+
+});
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>
