@@ -1,0 +1,57 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <script src="p5.js"></script>
+  	<title></title>
+  </head>
+  <body>
+    	  <script> 
+    	    	  	var bubbles = [];
+  
+function setup() {
+  createCanvas(400, 400);
+
+
+}
+
+function mouseDragged(){
+  var r = random(10,40)
+ var c = random (10,255)
+
+  let b = new Bubble(mouseX,mouseY,r,c)
+  bubbles.push(b);
+}
+
+function draw() {
+  background(0);
+  for (let i = 0; i < bubbles.length; i++) {
+    bubbles[i].show();
+    bubbles[i].move();
+
+  }
+
+
+}
+class Bubble {
+  constructor(x, y, r, c) {
+    this.x = x;
+    this.y = y
+    this.r = r;
+    this.c = c
+  }
+  move() {
+    this.x = this.x + random(-5, 5)
+    this.y = this.y + random(-5, 5)
+  }
+  show() {
+    noStroke()
+    tint(255, 127);
+
+    fill(this.c);
+    ellipse(this.x, this.y, this.r * 2)
+  }
+}</script>
+
+  </body>
+  </html>
+
