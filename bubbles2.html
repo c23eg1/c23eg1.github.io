@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <style type="text/css">
+      body {
+        margin: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <audio
+      id="alexSong"
+      src="https://cdn.glitch.com/8fa7abfb-ca0d-421c-a9bc-91a1bca59275%2Ftequila.mp3?v=1586882142522"
+    ></audio>
+
+    <script src="p5.js"></script>
+
+    <script>
+      //this function creates the canvas that is "drawn" on. A canvas is exactly what it sounds like. A place to make things//
+
+      function setup() {
+        createCanvas(1500, 800); // these are the dimensions of the canvas
+      }
+
+      //this is where ella created an array. the variable "bubbles" is pointing to her empty array//
+      var bubbles = [];
+
+      //a class is a bluprint or template for an instance of a thing you're going to make. Here, Ella created a class called "bubble" and inside this "cookie cutter" for her future bubble objects, she defined a bunch of stuff.//
+
+      class Bubble {
+        //a constructor function is a special kind of function that is a template for objects you're going to create. It's a receipe. it's not an object, it  _makes_ objects. The constructor function sets up all the attributes and values that will be part of the objects that it's going to create. "This" is a keyword in javascript that refers to the particular object we're making and the dot refers to a thing that's going to be _in_ that object.//
+
+        constructor(x, y, r, c) {
+          this.x = x;
+          this.y = y;
+          this.r = r;
+          this.c = c;
+        }
+
+        //m
+
+        move() {
+          this.x = this.x + random(-5, 5);
+          this.y = this.y + random(-5, 5);
+        }
+
+        show() {
+   
+  
+          tint(255, 127);
+          fill(this.c);
+          ellipse(this.x, this.y, this.r * 2);
+        }
+      }
+
+      function mouseDragged() {
+        var r = 30;
+                strokeWeight(random(1,10))
+        var c = (255);
+        let b = new Bubble(mouseX, mouseY, r, c);
+        stroke(random(0,255),random(0,255),random(0,255))
+        bubbles.push(b);
+      }
+
+      function draw() {
+        background(255);
+        for (let i = 0; i < bubbles.length; i++) {
+          bubbles[i].show();
+          bubbles[i].move();
+        }
+      }
+
+      var mitz = document.getElementById("alexSong");
+
+      var x = 0;
+      document.addEventListener("click", function() {
+        x = x + 1;
+        if (x % 2 == 1) {
+          mitz.play();
+        } else if (x % 2 == 0) {
+          mitz.pause();
+        }
+      });
+    </script>
+  </body>
+</html>
