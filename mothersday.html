@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+    .heart {
+
+         background-size: contain;
+        background-repeat: no-repeat;
+            width: 100px;
+            height: 100px;
+            position: relative;
+            display: inline-block;
+            font-family: 'Indie Flower', cursive;
+            text-align: center;
+            font-size:16px;
+            margin:20px;
+            position: relative;
+            display:inline-block;
+            margin-left:30px;
+            transition:1s;
+    }
+
+    .pic {
+        background-image: url("heart2.png");
+
+
+    }
+    h1 {
+        font-family: 'Indie Flower', cursive;
+        position: relative;
+    }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>I love you because...</h1>
+    <script type="text/javascript">
+    function makeHeart(i) {
+
+
+         var heart = document.createElement("heart");
+    
+        document.body.appendChild(heart);
+        heart.classList.add("heart");
+                heart.classList.add("pic");
+        document.body.appendChild(heart);
+    
+  heart.addEventListener("click",function(){
+    function remove(){
+     heart.classList.remove("pic");  
+     heart.innerHTML=array[i]; 
+    }
+    function add(){
+     heart.classList.add("pic");  
+     heart.innerHTML=""; 
+    }
+remove();
+setTimeout(add,2000)
+
+// heart.innerHTML= text;
+
+console.log(event);
+  });
+
+
+        function move() {
+     heart.style.left = Math.round(Math.random() * 70) + "px";
+        heart.style.top =  Math.round(Math.random() * 70)-10 + "px";
+
+};
+
+setTimeout(move,1);
+setInterval(move, 1000);
+
+
+    };
+
+    var array = ["you always make me laugh when I am sad",
+        "i can count on you to listen to my crazy stories and pretend to be engaged",
+        "you put our feelings before yours",
+        "your cooking always cheers me up (baked ZITI)",
+        "you always push me to my limits",
+        "you will NEVER turn down an excercise class on the rare occasion that i wanna do one",
+        "you are beautiful inside and out", "our nightime talks are always amazing", "you only correct my grammer SOMETIMES", "you always watch movies with me!!","you will keep me company late at night just so i dont have to make pudding alone","you make me smile 24/7","you never stay mad for more than 3 minutes","you are selfless","you are always up for an activity","you are determined","you are insanely confident in the best way","YOU ARE AMAZING"
+    ];
+
+    for (var i = 0; i <= array.length - 1; i++) {
+        makeHeart(i);
+    }
+    </script>
+</body>
+
+</html>

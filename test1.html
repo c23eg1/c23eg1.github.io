@@ -14,14 +14,13 @@
 
     }
     .dot {
-        width: 50px;
-        height: 50px;
+        background-image: url("heart2.png");
         background-size: contain;
         background-repeat: no-repeat;
-        display: inline-block;
-        position: absolute;
-        z-index: -1;
-        border-radius: 25px;
+            width: 100px;
+            height: 100px;
+/*            background-color: blue;*/
+            position: absolute;
 
     }
 
@@ -39,7 +38,7 @@
         var dot = document.createElement("div");
         var randomNumber = Math.round(Math.random() * 8)
         document.body.appendChild(dot);
-        dot.style.backgroundColor = color[randomNumber];
+        // dot.style.backgroundColor = color[randomNumber];
         dot.classList.add("dot");
         dot.style.opacity = "100";
         
@@ -53,11 +52,11 @@
 
 
 
-        var clear = document.getElementById("clear")
-        clear.addEventListener("click", function() {
-            dot.style.opacity = "0";
+        // var clear = document.getElementById("clear")
+        // clear.addEventListener("click", function() {
+        //     dot.style.opacity = "0";
 
-        })
+        // })
 
 function move() {
      dot.style.left = Math.round(Math.random() * 1000) + "px";
@@ -73,7 +72,7 @@ setInterval(move,1000);
 
 
     }
-    for (var i = 0; i < 1000; i++) {
+    for (var i = 0; i < 100; i++) {
         makeDot();
     }
 
