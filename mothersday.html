@@ -4,26 +4,26 @@
 <head>
     <title></title>
     <style type="text/css">
-    html{
+    html {
         background-color: #ffdbee;
     }
 
     .heart {
 
-         background-size: contain;
+        background-size: contain;
         background-repeat: no-repeat;
-            width: 100px;
-            height: 100px;
-            position: relative;
-            display: inline-block;
-            font-family: 'Indie Flower', cursive;
-            text-align: center;
-            font-size:16px;
-            margin:20px;
-            position: relative;
-            display:inline-block;
-            margin-left:30px;
-            transition:1s;
+        width: 100px;
+        height: 100px;
+        position: relative;
+        display: inline-block;
+        font-family: 'Indie Flower', cursive;
+        text-align: center;
+        font-size: 16px;
+        margin: 20px;
+        position: relative;
+        display: inline-block;
+        margin-left: 30px;
+        transition: 1s;
     }
 
     .pic {
@@ -31,60 +31,60 @@
 
 
     }
+
     h1 {
         font-family: 'Indie Flower', cursive;
         position: relative;
     }
-    h2{
+
+    h2 {
         position: fixed;
-            font-family: 'Indie Flower', cursive;
-     bottom: 0;
-     right: 50px;
+        font-family: 'Indie Flower', cursive;
+        bottom: 0;
+        right: 50px;
     }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <h1>I love you because...</h1>
+    <h1>We love you because...</h1>
     <h2>Love, Ella and Gideon</h2>
     <script type="text/javascript">
     function makeHeart(i) {
 
 
-         var heart = document.createElement("heart");
-    
+        var heart = document.createElement("heart");
+
         document.body.appendChild(heart);
         heart.classList.add("heart");
-                heart.classList.add("pic");
+        heart.classList.add("pic");
         document.body.appendChild(heart);
-    
-  heart.addEventListener("click",function(){
-    function remove(){
-     heart.classList.remove("pic");  
-     heart.innerHTML=array[i]; 
-    }
-    function add(){
-     heart.classList.add("pic");  
-     heart.innerHTML=""; 
-    }
-remove();
-setTimeout(add,2000)
 
-// heart.innerHTML= text;
+        heart.addEventListener("click", function() {
+            function remove() {
+                heart.classList.remove("pic");
+                heart.innerHTML = array[i];
+            };
 
-console.log(event);
-  });
+            function add() {
+                heart.classList.add("pic");
+                heart.innerHTML = "";
+            }
+            remove();
+            setTimeout(add, 2000)
+            console.log(event);
+        });
 
 
         function move() {
-     heart.style.left = Math.round(Math.random() * 70) + "px";
-        heart.style.top =  Math.round(Math.random() * 60)-30 + "px";
+            heart.style.left = Math.round(Math.random() * 70) + "px";
+            heart.style.top = Math.round(Math.random() * 60) - 30 + "px";
 
-};
+        };
 
-setTimeout(move,1);
-setInterval(move, 1000);
+        setTimeout(move, 1);
+        setInterval(move, 1000);
 
 
     };
@@ -95,7 +95,7 @@ setInterval(move, 1000);
         "your cooking always cheers me up (baked ZITI)",
         "you always push me to my limits",
         "you will NEVER turn down an excercise class on the rare occasion that i wanna do one",
-        "you are beautiful inside and out", "our nightime talks are always amazing", "you only correct my grammer SOMETIMES", "you always watch movies with me!!","you will keep me company late at night just so i dont have to make pudding alone","you make me smile 24/7","you never stay mad for more than 3 minutes","you are selfless","you are always up for an activity","you are determined","you are insanely confident in the best way","YOU ARE AMAZING","you help us on our work","you are loving","you are the best mom out there."
+        "you are beautiful inside and out", "our nightime talks are always amazing", "you only correct my grammer SOMETIMES", "you always watch movies with me!!", "you will keep me company late at night just so i dont have to make pudding alone", "you make me smile 24/7", "you never stay mad for more than 3 minutes", "you are selfless", "you are always up for an activity", "you are determined", "you are insanely confident in the best way", "YOU ARE AMAZING", "you help us on our work", "you are loving", "you are the best mom out there."
     ];
 
     for (var i = 0; i <= array.length - 1; i++) {
