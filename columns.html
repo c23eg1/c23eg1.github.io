@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="p5.js"></script>
+	<title></title>
+</head>
+<body>
+	<script>
+		
+		function setup() {
+  createCanvas(1500, 800);
+    // x = width /2;
+  // y = height /2;
+    // x=random(400)
+
+  noStroke();
+  background(0)
+
+}
+
+function draw() {
+  
+
+
+}
+
+  function circles(x,z,r){
+      var y=0;
+    var r;
+    var inc = 10;
+    while(y<height){
+  fill(z)
+  ellipse(x, y,r);
+  y=y+5
+      z=z+inc
+      r=r+inc/2
+      if(z>250||z<0){
+        inc=inc*-1
+      }
+    }
+  }
+function mouseDragged(){
+circles(mouseX,0,50)
+}
+
+	</script>
+
+</body>
+</html>
